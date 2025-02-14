@@ -1,7 +1,9 @@
 package contabancaria;
 import java.util.Scanner;
-import conta.model.Contabancaria;
-import conta.util.Cores;
+import contabancaria.model.Contabancaria;
+import contabancaria.model.ContaCorrente;
+import contabancaria.model.ContaPoupanca;
+import contabancaria.util.Cores;
 import contabancaria.model.Conta;
 public class Menu {
 
@@ -13,6 +15,20 @@ public class Menu {
 		c1.visualizar();
 		c1.depositar(50000.0f);
 		c1.visualizar();
+		
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Luan", 17500.0f, 10000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Liam", 27500.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(14350.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 		
 		Scanner leia = new Scanner(System.in);
 		int opcao;
